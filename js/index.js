@@ -6,9 +6,22 @@ $(function(){
 		$leftMune = $(".main-sidebar"),
 		$logo = $(".logo");
 	
-	
+	$(window).resize(function(){
+		if( $(window).width() > 768 ) {
+			$(".content-wrapper").removeClass("short");
+			$(".content-wrapper").removeClass("long");
+			if($leftMune.width() == 50){
+				$(".content-wrapper").addClass("smallcont");
+			}
+			$leftMune.removeClass("smallshrink");
+		}else{
+			$(".content-wrapper").removeClass("smallcont");
+			
+			$leftMune.removeClass("smallshrink");
+		}
+	});
 	//左侧菜单收缩
-	$muneShrink.on("click",function(){
+	$muneShrink.on("click",function(){	
 		if($(window).width() > 768){
 			if($leftMune.hasClass("shrink") && $logo.hasClass("shrink")){
 				$(".sidebar-menu li.menu-header").removeClass("hide");
@@ -18,6 +31,7 @@ $(function(){
 				$logo.removeClass("shrink");
 				$(".logo-min").hide();
 				$(".logo-lg").show();	
+				$(".content-wrapper").removeClass("smallcont");
 			}else{
 				$(".sidebar-menu li.menu-header").addClass("hide");
 				$(".sidebar-menu>li>.treeview-menu").addClass("hide");
@@ -26,12 +40,25 @@ $(function(){
 				$logo.addClass("shrink");
 				$(".logo-min").show();
 				$(".logo-lg").hide();	
+				$(".content-wrapper").addClass("smallcont");
 			}	
 		}else{
 			if($leftMune.hasClass("smallshrink")){
 				$leftMune.removeClass("smallshrink");	
+				//$(".content-wrapper").removeClass("smallcont");
+				if($leftMune.width() == 50){
+					$(".content-wrapper").removeClass("short");
+				}else{
+					$(".content-wrapper").removeClass("long");
+				}
 			}else{
 				$leftMune.addClass("smallshrink");
+				//$(".content-wrapper").addClass("smallcont");
+				if($leftMune.width() == 50){
+					$(".content-wrapper").addClass("short");
+				}else{
+					$(".content-wrapper").addClass("long");
+				}
 			}
 		}
 
