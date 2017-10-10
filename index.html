@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/blockUI/jquery_blockUI.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+		<script type="text/javascript" src="js/popup.js" ></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/popup.css" />
+	</head>
+	<body>
+		<div class="header">
+			<a href="#" class="logo">
+				<span class="logo-min"><b>La</b></span>
+				<span class="logo-lg"><b>Laravel</b> admin</span>
+			</a>
+			<div class="nav">
+				<a href="javascript:;" class="sidebar-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+				<div class="navbar-menu">
+					<div class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<img src="http://172.0.0.177:8001/packages/admin/AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+							<span class="hidden-xs">admin</span>
+						</a>
+					</div>
+					<ul class="dropdown-menu">
+						<li class="user-header">
+							<img src="http://172.0.0.177:8001/packages/admin/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+							<p>
+								admin
+								<span class="small">Member since admin </span>
+							</p>
+						</li>
+						<li class="user-footer">
+							<div class="pull-left">
+                                <a href="/admin/auth/setting" class="btn btn-default btn-flat">设置</a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="/admin/auth/logout" class="btn btn-default btn-flat">登出</a>
+                            </div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="main-sidebar">
+			<div class="sidebar">
+				<div class="user-panel">
+		            <div class="pull-left image">
+		                <img src="http://172.0.0.177:8001/packages/admin/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+		            </div>
+		            <div class="pull-left info">
+		                <p>admin</p>
+		                <!-- Status -->
+		                <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+		            </div>
+		        </div>
+		        
+		        <ul class="sidebar-menu">
+					<li class="menu-header">菜单</li>
+				
+					<li>
+						<a href="/admin/"><span class="glyphicon glyphicon-home"></span>
+							<span class="shrinkhide">首页</span>
+						</a>
+					</li>
+					<li class="treeview">
+						<a href="#">
+							<span class="glyphicon glyphicon-th-list"></span>
+							<span class="shrinkhide">管理</span>
+							<span class="pull-right glyphicon glyphicon-menu-left"></span>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="/admin/auth/users">
+									<span>用户</span>
+								</a>
+							</li>
+							<li>
+								<a href="/admin/auth/roles">
+									<span>角色</span>
+								</a>
+							</li>
+							<li>
+								<a href="/admin/auth/permissions">
+									<span>权限</span>
+								</a>
+							</li>
+							<li>
+								<a href="/admin/auth/menu">
+									<span>菜单</span>
+								</a>
+							</li>
+							<li>
+								<a href="/admin/auth/logs">
+									<span>日志</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="treeview">
+						<a href="#">
+							<span class="glyphicon glyphicon-cog"></span>
+							<span class="shrinkhide">Helpers</span>
+							<span class="pull-right glyphicon glyphicon-menu-left"></span>
+						</a>
+						<ul class="treeview-menu">
+							<li>
+								<a href="/admin/helpers/scaffold">
+									<span>Scaffold</span>
+								</a>
+							</li>
+							<li>
+								<a href="/admin/helpers/terminal/database">
+									<span>Database terminal</span>
+								</a>
+							</li>
+							<li>
+								<a href="/admin/helpers/terminal/artisan">
+									<span>Laravel artisan</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="treeview">
+				        <a href="#">
+				            <span class="glyphicon glyphicon-cog"></span>
+				            <span class="shrinkhide">模块</span>
+				            <span class="pull-right glyphicon glyphicon-menu-left"></span>
+				        </a>
+				        <ul class="treeview-menu">
+							<li>
+					        	<a href="#">
+						            <span class="glyphicon glyphicon-cog"></span>
+						            <span>二级</span>
+						            <span class="pull-right glyphicon glyphicon-menu-left"></span>
+				       			 </a>
+					        	<ul class="treeview-menu">
+									<li>
+								        <a href="javascript:;">
+								        	<span class="glyphicon glyphicon-cog"></span>
+								            <span>三级</span>
+								            <span class="pull-right glyphicon glyphicon-menu-left"></span>
+								        </a>
+								        <ul class="treeview-menu">
+											<li>
+												<a href="javascript:;">
+													<span class="glyphicon glyphicon-cog"></span>
+													<span>四级</span>
+												</a>
+											</li>
+										</ul>
+					   				</li>
+								</ul>
+				    		</li>
+						</ul>
+				    </li>
+
+				</ul>
+			</div>
+		</div>
+		
+		<div class="content-wrapper">
+			<div class="content-header">
+				
+			</div>
+			<div class="content">
+				
+			</div>
+		</div>
+		
+		<div class="footer">
+			
+		</div>
+				
+	</body>
+</html>
+
+
